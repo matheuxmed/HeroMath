@@ -1,0 +1,43 @@
+
+{
+  "entities": {
+    "UserProfile": {
+      "title": "User Profile",
+      "description": "Details about a registered user in the system.",
+      "type": "object",
+      "properties": {
+        "displayName": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "photoURL": { "type": "string" },
+        "role": { "type": "string", "enum": ["student", "teacher"] }
+      },
+      "required": ["email", "role"]
+    },
+    "Lesson": {
+      "title": "Lesson",
+      "description": "A math lesson created by a teacher.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "topic": { "type": "string" },
+        "content": { "type": "string" },
+        "authorId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "topic", "content", "authorId"]
+    }
+  },
+  "auth": {
+    "providers": ["google.com"]
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": "UserProfile",
+      "description": "User profile documents."
+    },
+    "/lessons/{lessonId}": {
+      "schema": "Lesson",
+      "description": "Lesson content and metadata."
+    }
+  }
+}

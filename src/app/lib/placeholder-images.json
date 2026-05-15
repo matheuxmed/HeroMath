@@ -1,0 +1,22 @@
+{
+  "placeholderImages": [
+    {
+      "id": "hero-math",
+      "description": "Abstract mathematical symbols and geometry",
+      "imageUrl": "https://picsum.photos/seed/math1/1200/600",
+      "imageHint": "mathematics geometry"
+    },
+    {
+      "id": "lesson-algebra",
+      "description": "Algebraic equations on a chalkboard",
+      "imageUrl": "https://picsum.photos/seed/algebra/800/400",
+      "imageHint": "algebra equations"
+    },
+    {
+      "id": "lesson-calculus",
+      "description": "Calculus derivatives and graphs",
+      "imageUrl": "https://picsum.photos/seed/calculus/800/400",
+      "imageHint": "calculus graphs"
+    }
+  ]
+}
